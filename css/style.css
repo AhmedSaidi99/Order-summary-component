@@ -1,0 +1,138 @@
+* {
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(225, 100%, 94%);
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    font-family: 'Red Hat Display', sans-serif;
+}
+@media (max-width: 768px) {
+    body {
+        background-image: url(../images/pattern-background-mobile.svg);
+    }
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    min-height: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 20px 20px -10px hsl(245deg 75% 52% / 20%);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 200px auto;
+}
+@media (max-width: 375px) {
+    .container {
+        width: 340px;
+    }
+}
+
+.container img {
+    width: 100%;
+}
+.container .content {
+    padding: 40px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.container .content .text {
+    text-align: center;
+    margin-top: 10px;
+}
+.container .content .text h3 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 25px;
+    color: hsl(223, 47%, 23%);
+}
+.container .content .text p {
+    font-size: 16px;
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+    margin-bottom: 0;
+}
+.container .content .plan {
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    padding: 10px 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .content .plan .price {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .content .plan img {
+    width: 40px;
+    height: 40px;
+}
+.container .content .plan p {
+    justify-self: flex-start;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+.container .content .plan p span {
+    font-weight: normal;
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+}
+.container .content .plan a {
+    color: hsl(245, 75%, 52%);
+    margin: 0;
+    text-decoration: underline;
+}
+.container .content .plan a:focus,
+.container .content .plan a:hover {
+    color: hsl(245, 83%, 68%);
+}
+.container .content .btn {
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Red Hat Display', sans-serif;
+    box-shadow: 0px 20px 20px 0px hsl(245deg 75% 52% / 20%);
+    cursor: pointer;
+}
+.container .content .btn:focus,
+.container .content .btn:hover {
+    outline: none;
+    background-color: hsl(245, 83%, 68%);
+    box-shadow: 0px 20px 20px 0px hsl(245, 83%, 68% / 20%);
+}
+.container .content a {
+    text-decoration: none;
+    text-align: center;
+    font-weight: 900;
+    font-size: 14px;
+    margin-top: 20px;
+    color: hsl(224, 23%, 55%);
+}
+.container .content a:focus, 
+.container .content a:hover {
+    color: hsl(223, 47%, 23%);
+}
